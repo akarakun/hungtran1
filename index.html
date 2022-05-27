@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+<div class="sidebar">
+    <div class="logo-details">
+        <img src="~../../images/logo.png" alt="HungTran" class="logo">
+        <span class="logo-name">Hùng Trần</span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <div class="icon-links">
+                <a href="#">
+                    <i class="fas fa-th-large"></i>
+                    <span class="links-name">Trang Chủ</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="icon-links">
+                <a href="#">
+                    <i class="fas fa-archive"></i>
+                    <span class="links-name">Sản Phẩm</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="icon-links">
+                <a href="#">
+                    <i class="fas fa-list-ul"></i>
+                    <span class="links-name">Danh sách đặt hàng</span>
+                </a>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+                <li>
+                    <a href="#"> Sản phẩm A</a>
+                </li>
+                <li>
+                    <a href="#">Sản phẩm B</a>
+                </li>
+                <li>
+                    <a href="#">Sản phẩm C</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-links">
+                 <a href="#">
+                    <i class="fas fa-book"></i>
+                    <span class="links-name">Tổng đơn hàng</span>
+                </a>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+                <li>
+                    <a href="#"> Sản phẩm A</a>
+                </li>
+                <li>
+                    <a href="#">Sản phẩm B</a>
+                </li>
+                <li>
+                    <a href="#">Sản phẩm C</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-links">
+               <a href="#">
+                    <i class="far fa-user"></i>
+                    <span class="links-name">Team</span>
+                </a> 
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+                <li>
+                    <a href="#"> Sản phẩm A</a>
+                </li>
+                <li>
+                    <a href="#">Sản phẩm B</a>
+                </li>
+                <li>
+                    <a href="#">Sản phẩm C</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-links">
+                <a href="#">
+                    <i class="far fa-comment-alt"></i>
+                    <span class="links-name">Messenger</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="icon-links">
+                <a href="#">
+                    <i class="far fa-heart"></i>
+                    <span class="links-name">Danh mục yêu thích</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="icon-links">
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span class="links-name">Setting</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="icon-links">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="links-name">Đăng xuất</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<section class="home-section">
+    <nav>
+        <div class="sidebar-button">
+            <i class="fas fa-bars"></i>
+            <span class="dashboard">dashboard</span>
+        </div>
+        <div class="search-box">
+            <input type="checkbox" id="check">
+            <div class="search-box--icon">
+              <input type="text" placeholder="Tìm kiếm...">
+              <label for="check" class="icon">
+                <i class="fas fa-search"></i>
+              </label>
+            </div>
+        </div>
+        <div class="profile-details">
+            <img src="~../../images/cover2.jpg" alt="avata">
+            <span class="account-name">Trần Hùng</span>
+            <i class="fas fa-chevron-down arrow" title="Share"></i>
+        </div>
+    </nav>
+    <div class="home-content">
+        <div class="overview-boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="sales-boxes">
+        </div>
+    </div>
+    <div class="share">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="messenger-face">
+        <!-- Messenger Plugin chat Code -->
+        <div id="fb-root"></div>
+
+        <!-- Your Plugin chat code -->
+        <div id="fb-customer-chat" class="fb-customerchat">
+        </div>
+
+        <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "104450664936276");
+        chatbox.setAttribute("attribution", "biz_inbox");
+
+        window.fbAsyncInit = function() {
+            FB.init({
+            xfbml            : true,
+            version          : 'v12.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </div>
+</section>
+<script src="~../../js/script.js"></script>
+</body>
+</html>

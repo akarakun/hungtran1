@@ -1,0 +1,29 @@
+@media (max-width: 730px) {
+    .cover {
+      display: none;
+    }
+    .form-content {
+      .login-form {
+        width: 100% !important;
+      }
+      .signup-form {
+        width: 100% !important;
+        display: none;
+      }
+    }
+    #flip {
+      &:checked ~ {
+        .forms {
+          .form-content {
+            .signup-form {
+              display: block !important;
+            }
+            .login-form {
+              display: none;
+            }
+          }
+        
+        }
+      }
+    }
+}
